@@ -1,0 +1,241 @@
+
+.hidden { display: none;}
+
+body {
+  color: #EAFBFF;
+  font-size: 100%;
+  font-family: helvetica, arial, sans-serif;
+}
+
+h2 {padding: 0.5em; font-size: 2em; margin-top: 1em;}
+
+.mainHeader {
+  background-color: #312783;
+  color: white;
+  padding: 1em;
+  height: 80px;
+}
+
+.sector {
+  padding: 10px 12px;
+  color: white;
+  background-color: #333;
+  border-radius: 8px;
+}
+
+.bannerCon {
+  color: white;
+  padding: 2em;
+}
+
+.bodyCon {
+  color: white;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.footerCon {
+  background-color:#312783;
+  color: white;
+  padding: 2em;
+}
+
+/* ----------- Header starts --------   */
+
+#navContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+#logoCon {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+/* navigation burger*/
+
+#mainNav {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+#mainNav button { margin-left: auto; }
+
+#burgerCon {
+	display: none; /*hide intitially*/
+  margin-top: 10px; /*bump menu below 3 lines*/
+}
+
+ #burgerCon.slideToggle { display: block; }
+
+ #mainNav button {
+  background: url(../images/icons/burger.svg) center no-repeat;
+  border: 1px;
+  width: 30px;
+  height: 30px;
+  transition: all 400ms ease;
+}
+
+ .expanded {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+#mainNav li a {
+	/*background-color: #fff;*/
+	display: block;
+	color: #2472B8;
+	padding: 10px 0 10px 0;
+	text-align: center;
+}
+
+#mainNav li { border-bottom: 1px solid #fff; }
+
+#mainNav li:first-child { border-top: 1px solid #fff; }
+
+#mainNav li:last-child { margin-bottom: 10px; }
+
+#mainNav li a:hover { background-color: #fff; color: #2472B8;}
+
+
+.logInButton {
+	background-color: #fff;
+	width: 170px;
+	color: #E10B14;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	padding: 20px 5px 20px 5px;
+	border-radius: 5px;
+	margin-top: 10px;
+	font-size: 15px;
+	transition: all .5s ease;
+}
+
+.logInButton:hover { color: #fff; background-color: #E10B14; }
+
+
+
+/* HOME */  /* ----------- Main Banner starts --------   */
+
+#imageBanner {
+  padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 464px;
+	background-image: url(../images/lo-res_MOBILE/promo/Mobile_beer_promo1.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#imageBanner h2 {
+	font-size: 30px;
+	font-weight: bold;
+	color: #312783;
+	text-align: center;
+	margin-top: 75%;
+}
+
+#imageBanner p {
+	font-size: 15px;
+	color: #312783;
+	line-height: 20px;
+  text-align: center;
+	margin-bottom: 10px;
+}
+
+
+#seeMore {
+	display: block;
+	width: 140px;
+  background-color: #E10B14;
+	color: #fff;
+  border-radius: 5px;
+	padding: 15px 0;
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+	margin: 0 auto;
+}
+
+#seeMore:hover {
+	background-color: #fff;
+  color: #E10B14;
+}
+
+
+/* ----------- Body starts --------   */
+
+.homeBodyCon {
+	width: 450px;
+  height: 250px;
+	color: #fff;
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	padding: 20px 0 20px 0;
+	border-radius: 10px;
+	margin-top: 20px;
+	font-size: 15px;
+}
+
+.homeBodyCon:hover {
+  transform: scale(1.05);
+}
+
+.textBoxCon {
+  background-color: black;
+  opacity: 70%;
+  margin-top: 30%;
+  padding: 10px 0 10px 0;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.historyHome {
+  background: url(../images/promos/home_body_history.jpg) center no-repeat;
+}
+
+.beerHome {
+  background: url(../images/promos/home_body_beers.jpg) center no-repeat;
+}
+
+
+
+
+/* ----------- screens diplay - Responsive --------   */
+
+@media screen and (min-width: 620px) {
+  main { width: 1200px; margin: auto;}
+
+  #imageBanner {
+  	width: auto;
+  	background-image: url(../images/hi-res_WEB/promo/Web_beer_promo1.jpg);
+  }
+
+  #imageBanner h2 {
+  	text-align: left;
+    margin-top: auto;
+    margin-left: 2em;
+    font-size: 60px;
+  }
+
+  #imageBanner p {
+  	text-align: left;
+    margin-left: 2em;
+    font-size: 30px;
+  }
+
+  .bodyCon { flex-direction: row; }
+
+
+}
+
+@media screen and (min-width: 1000px) {
+  main { width: 1200px; margin: auto;}
+}
